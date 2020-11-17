@@ -1,0 +1,50 @@
+{
+  "name": "root",
+  "private": false,
+  "repository": "https://github.com/AcousticStream/webslack",
+  "author": "CraftingGamerTom",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "eslintIgnore": [
+    "**/node_modules/**"
+  ],
+  "scripts": {
+    "dev": "echo \"Implement me!\"",
+    "diff": "lerna diff",
+    "presetup": "npm run install",
+    "setup": "lerna bootstrap",
+    "test:parent": "NODE_ENV=testing mocha ./test/**/*.test.js",
+    "test": "npm run test:parent && lerna run test",
+    "test-specific": "nyc lerna run test --scope=@craftinggamertom/webslack",
+    "test-since": "lerna run test --since",
+    "new-version": "lerna version --conventional-commits --yes",
+    "lint": "lerna run lint",
+    "preship": "npm run test",
+    "ship": "lerna publish",
+    "storybook": "start-storybook -p 6006 --no-dll",
+    "build-storybook": "build-storybook --no-dll"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
+    "@storybook/vue": "^6.0.28",
+    "babel-loader": "^8.2.1",
+    "babel-preset-vue": "^2.0.2",
+    "eslint": "6.8.0",
+    "lerna": "^3.22.1",
+    "mocha": "7.2.0",
+    "nyc": "^15.1.0",
+    "react-is": "^17.0.1",
+    "should": "13.2.3",
+    "sinon": "9.0.2",
+    "vue-loader": "^15.9.5",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
+}
