@@ -56,5 +56,6 @@
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "vue": "^2.6.12"
-  }
+  },
+  "gitHead": "4e5745b5e81f3395a4547a26213478dab57bb3a1"
 }
