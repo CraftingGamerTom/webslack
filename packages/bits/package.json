@@ -1,6 +1,6 @@
 {
   "name": "@craftinggamertom/webslack-bits",
-  "version": "1.0.1-alpha.0",
+  "version": "1.0.0",
   "description": "library of user interface components",
   "keywords": [
     "nuxt",
@@ -16,6 +16,8 @@
     "test": "__tests__"
   },
   "files": [
+    "LICENSE",
+    "README.md",
     "lib"
   ],
   "repository": {
@@ -26,6 +28,9 @@
     "test": "echo \"Error: run tests from root\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "bugs": {
     "url": "https://github.com/CraftingGamerTom/webslack/issues"
@@ -57,5 +62,5 @@
     "style-loader": "^2.0.0",
     "vue": "^2.6.12"
   },
-  "gitHead": "c4d22696e2ef8d4d4c7c46a3bb5ce6fc41f66a6d"
+  "gitHead": "d319d6175e3520d2d70cf187b8b275534c81209d"
 }
