@@ -1,0 +1,60 @@
+{
+  "name": "bits",
+  "version": "1.0.0",
+  "description": "library of user interface components",
+  "keywords": [
+    "nuxt",
+    "ui",
+    "vue"
+  ],
+  "author": "Thomas Rokicki <tcrokicki@gmail.com>",
+  "homepage": "https://github.com/CraftingGamerTom/webslack",
+  "license": "MIT",
+  "main": "lib/bits.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CraftingGamerTom/webslack.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "bugs": {
+    "url": "https://github.com/CraftingGamerTom/webslack/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@storybook/addon-actions": "^6.1.0",
+    "@storybook/addon-essentials": "^6.1.0",
+    "@storybook/addon-links": "^6.1.0",
+    "@storybook/vue": "^6.1.0",
+    "babel-loader": "^8.2.1",
+    "babel-preset-vue": "^2.0.2",
+    "vue-loader": "^15.9.5",
+    "vue-svg-loader": "^0.16.0",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/vue-fontawesome": "^2.0.0",
+    "@storybook/preset-scss": "^1.0.3",
+    "bootstrap": "^4.5.3",
+    "bootstrap-vue": "^2.19.0",
+    "css-loader": "^5.0.1",
+    "jquery": "^3.5.1",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "vue": "^2.6.12"
+  }
+}

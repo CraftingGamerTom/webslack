@@ -1,0 +1,8 @@
+// THIS IS NOT CURRENTLY USED FOR ANYTING BUT MAY BE USED IN THE FUTURE
+{
+    "packages": {
+        "quick_icon": {
+            "asset_location": "./"
+        }
+    }
+}
