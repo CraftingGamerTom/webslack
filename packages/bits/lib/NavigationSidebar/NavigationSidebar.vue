@@ -254,7 +254,6 @@ span {
   & .nav-item:last-child {
     margin-bottom: 2vh;
   }
-
 }
 
 .expanded {
