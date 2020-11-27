@@ -29,7 +29,7 @@ export default {
     },
     location: {
       type: String,
-      default: 'icons'
+      default: '~/assets/icons'
     },
     width: {
       type: String,
@@ -72,11 +72,11 @@ export default {
       switch (this.type) {
         case 'managed':
           try {
-            this.imageComponent = require('~/assets/' + this.location + '/' + this.name + '.svg?inline')
+            this.imageComponent = require(this.location + '/' + this.name + '.svg?inline')
             // this.imageComponent = require('~/assets/icons/' + this.name + '.svg?inline') // For testing
-            // this.$log.debug('QuickIcon:', this.imageComponent)
+            // console.debug('QuickIcon:', this.imageComponent)
           } catch (err) {
-            this.$log.error('QuickIcon: Could not find the icon. Did you define "name" ?', err)
+            console.error('QuickIcon: Could not find the icon. Did you define "name" ?', err)
           }
           break
         //   case 'fa': // TODO support font-awesome
@@ -86,7 +86,7 @@ export default {
         //   case 'external': // TODO support external
         //     break
         default:
-          this.$log.error('QuickIcon: "' + this.type + '" is not a supported "type"')
+          console.error('QuickIcon: "' + this.type + '" is not a supported "type"')
       }
     }
   }

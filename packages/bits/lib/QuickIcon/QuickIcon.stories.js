@@ -6,6 +6,6 @@ storiesOf('QuickIcon', module)
     components: { QuickIcon },
     template:
     `
-    <QuickIcon :name="'check-icon'" :width="'20'" :size="'1'" viewBox="0 9 32 32" />
+    <QuickIcon :location="'./icons'" :color="'black'" :name="'check-icon'" :width="'20'" :size="'4'" viewBox="0 0 32 32" />
     `
   }))
