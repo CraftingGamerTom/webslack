@@ -3,7 +3,7 @@
   <div>
     <b-navbar toggleable="md" type="dark" fixed="top">
       <b-navbar-brand to="/">
-        <img class="nav-logo" :src="brandImageSrc">
+        <Icon :name="brandImage.icon" :location="brandImage.managedIconLocation" :width="brandImage.width" :size="brandImage.size" :type="brandImage.iconType" />
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse" />
@@ -46,7 +46,7 @@ nav {
     font-weight: bold;
   }
   &:hover {
-  color: color(secondary-accent);
+  color: #E0E0E0;
   }
   &:before {
     display: block;
@@ -146,6 +146,7 @@ nav.navbar .btn {
 
 <script>
 import { BNavbar, BNavbarBrand, BNavbarToggle, BCollapse, BNavbarNav, BNavItem } from 'bootstrap-vue'
+import Icon from '../QuickIcon/QuickIcon.vue'
 
 export default {
   components: {
@@ -154,17 +155,17 @@ export default {
     BNavbarToggle,
     BCollapse,
     BNavbarNav,
-    BNavItem
+    BNavItem,
+    Icon
   },
   props: {
     navItems: {
       type: Array,
       required: true
     },
-    brandImageSrc: {
-        type: String,
-        required: false,
-        default: ""
+    brandImage: {
+        type: Object,
+        required: true
     }
   },
   methods: {

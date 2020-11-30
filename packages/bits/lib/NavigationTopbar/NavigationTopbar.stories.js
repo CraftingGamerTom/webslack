@@ -6,7 +6,7 @@ storiesOf('NavigationTopbar', module)
     components: { NavigationTopbar },
     template:
     `
-    <navigation-topbar :nav-items="topbarItems" />
+    <navigation-topbar :nav-items="topbarItems" :brand-image="brandImage" />
     `,
     data() {
         return {
@@ -20,7 +20,13 @@ storiesOf('NavigationTopbar', module)
               link: '/example'
             }
           ],
-          brandImageSrc: "./brands/example-brand.png"
+          brandImage: {
+            icon: "mobile-icon",
+            managedIconLocation: "./icons",
+            width: "12",
+            size: "2",
+            iconType: "managed"
+          }
         }
     }
   }))
