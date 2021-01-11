@@ -25,7 +25,7 @@
     "url": "git+https://github.com/CraftingGamerTom/webslack.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
+    "test": "echo \"THIS IS THE BITS TEST\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

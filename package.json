@@ -1,7 +1,7 @@
 {
   "name": "root",
   "private": false,
-  "repository": "https://github.com/AcousticStream/webslack",
+  "repository": "https://github.com/CraftingGamerTom/webslack",
   "author": "CraftingGamerTom",
   "license": "MIT",
   "workspaces": [
@@ -13,11 +13,11 @@
   "scripts": {
     "dev": "echo \"Implement me!\"",
     "diff": "lerna diff",
-    "presetup": "npm run install",
+    "presetup": "npm install",
     "setup": "lerna bootstrap",
     "test:parent": "NODE_ENV=testing mocha ./test/**/*.test.js",
     "test": "npm run test:parent && lerna run test",
-    "test-specific": "nyc lerna run test --scope=@craftinggamertom/webslack",
+    "test-specific": "nyc lerna run test --scope=@craftinggamertom/webslack-bits",
     "test-since": "lerna run test --since",
     "new-version": "lerna version --conventional-commits --yes",
     "lint": "lerna run lint",
