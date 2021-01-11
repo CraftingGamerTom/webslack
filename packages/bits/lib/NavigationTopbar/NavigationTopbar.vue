@@ -1,7 +1,8 @@
 <template>
+  <!-- TODO: MAKE RESPONSIVE FOR MOBILE. Create a user-action menu in collapse that is only visible below 'md' and then make the outside defines user-actions display:none below 'md' -->
   <div>
     <b-navbar toggleable="md" type="dark" fixed="top">
-      <b-navbar-brand to="/">
+      <b-navbar-brand to="/" @click="isNavbarCollapseOpen = false">
         <Icon :name="brandImage.icon" :location="brandImage.managedIconLocation" :width="brandImage.width" :size="brandImage.size" :type="brandImage.iconType" />
       </b-navbar-brand>
 
@@ -9,9 +10,15 @@
         <slot name="user-actions-mobile-bar"/>
       </b-navbar-nav>
 
-      <b-navbar-toggle target="nav-collapse" />
+      <b-navbar-toggle target="nav-collapse" >
+        <template #default="{ expanded }">
+          <!-- <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
+          <b-icon v-else icon="chevron-bar-down"></b-icon> -->
+          <svg width="30" height="30" stroke="currentColor" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio"><path xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </template>
+      </b-navbar-toggle>
 
-      <b-collapse id="nav-collapse" is-nav>
+      <b-collapse id="nav-collapse" v-model="isNavbarCollapseOpen" is-nav>
         <div class="vertical" />
 
         <b-navbar-nav id="user-actions-mobile-dropdown" class="navbar-right d-md-none">
@@ -122,6 +129,11 @@ nav.navbar .btn {
   display: flex;
 }
 
+#user-actions-mobile-bar {
+  right: 75px;
+  position: fixed;
+}
+
   @media only screen and (min-width: 768px) {
   .vertical {
     display:block;
@@ -174,6 +186,11 @@ export default {
     brandImage: {
         type: Object,
         required: true
+    }
+  },
+  data() {
+    return {
+      isNavbarCollapseOpen: false
     }
   },
   methods: {
