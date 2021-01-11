@@ -1,3 +1,4 @@
+<template>
 <!-- TODO: Take inspiration from
 https://startbootstrap.com/previews/sb-admin-2/
 https://keenthemes.com/keen/preview/demo1/index.html
@@ -13,8 +14,6 @@ TODO: Change this into a component that can have elements defined using an objec
 
 TODO: Store sidebarExpanded in the store and change the wrapper size based on it
 -->
-
-<template>
   <ul class="sidebar navbar-nav" :class="{'expanded': sidebarExpanded}">
     <li>
       <button
