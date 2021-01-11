@@ -72,8 +72,8 @@ export default {
       switch (this.type) {
         case 'managed':
           try {
-            this.imageComponent = require(this.location + '/' + this.name + '.svg?inline')
-            // this.imageComponent = require('~/assets/icons/' + this.name + '.svg?inline') // For testing
+            // this.imageComponent = require(this.location + '/' + this.name + '.svg?inline')
+            this.imageComponent = require('~/assets/icons/' + this.name + '.svg?inline') // For testing
             // console.debug('QuickIcon:', this.imageComponent)
           } catch (err) {
             console.error('QuickIcon: Could not find the icon. Did you define "name" ?', err)
