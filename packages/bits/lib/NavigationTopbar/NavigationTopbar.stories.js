@@ -6,7 +6,17 @@ storiesOf('NavigationTopbar', module)
     components: { NavigationTopbar },
     template:
     `
-    <navigation-topbar :nav-items="topbarItems" :brand-image="brandImage" />
+    <navigation-topbar :nav-items="topbarItems" :brand-image="brandImage">
+      <template v-slot:user-actions-desktop>
+        <b-button variant="danger">Button</b-button>
+      </template>
+      <template v-slot:user-actions-mobile-dropdown>
+        <b-button variant="success">Button</b-button>
+      </template>
+      <template v-slot:user-actions-mobile-bar>
+        <b-button variant="info">Button</b-button>
+      </template>
+    </navigation-topbar>
     `,
     data() {
         return {

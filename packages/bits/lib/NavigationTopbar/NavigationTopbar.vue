@@ -1,25 +1,33 @@
 <template>
-  <!-- TODO: MAKE RESPONSIVE FOR MOBILE. Create a user-action menu in collapse that is only visible below 'md' and then make the outside defines user-actions display:none below 'md' -->
   <div>
     <b-navbar toggleable="md" type="dark" fixed="top">
       <b-navbar-brand to="/">
         <Icon :name="brandImage.icon" :location="brandImage.managedIconLocation" :width="brandImage.width" :size="brandImage.size" :type="brandImage.iconType" />
       </b-navbar-brand>
 
+      <b-navbar-nav id="user-actions-mobile-bar" class="navbar-right d-md-none">
+        <slot name="user-actions-mobile-bar"/>
+      </b-navbar-nav>
+
       <b-navbar-toggle target="nav-collapse" />
 
       <b-collapse id="nav-collapse" is-nav>
         <div class="vertical" />
+
+        <b-navbar-nav id="user-actions-mobile-dropdown" class="navbar-right d-md-none">
+          <slot name="user-actions-mobile-dropdown"/>
+        </b-navbar-nav>
 
         <b-navbar-nav>
           <b-nav-item v-for="item in navItems" :key="item.title" :class="amIActive(item.link)" :to="item.link">
             {{item.title}}
           </b-nav-item>
         </b-navbar-nav>
+
+        <b-navbar-nav id="user-actions-desktop" class="ml-auto d-none d-md-block">
+          <slot name="user-actions-desktop"/>
+        </b-navbar-nav>
       </b-collapse>
-      <div id="user-actions">
-        <slot name="user-actions"/>
-      </div>
     </b-navbar>
   </div>
 </template>
