@@ -1,7 +1,7 @@
 <template>
   <!-- TODO: MAKE RESPONSIVE FOR MOBILE. Create a user-action menu in collapse that is only visible below 'md' and then make the outside defines user-actions display:none below 'md' -->
   <div>
-    <b-navbar toggleable="md" type="dark" fixed="top">
+    <b-navbar toggleable="md" fixed="top">
       <b-navbar-brand to="/" @click="isNavbarCollapseOpen = false">
         <Icon :name="brandImage.icon" :location="brandImage.managedIconLocation" :width="brandImage.width" :size="brandImage.size" :type="brandImage.iconType" />
       </b-navbar-brand>
@@ -36,6 +36,7 @@
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
+
   </div>
 </template>
 
