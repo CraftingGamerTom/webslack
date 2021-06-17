@@ -132,6 +132,7 @@ nav.navbar .btn {
 #user-actions-mobile-bar {
   right: 75px;
   position: fixed;
+  top: 9px;
 }
 
   @media only screen and (min-width: 768px) {
